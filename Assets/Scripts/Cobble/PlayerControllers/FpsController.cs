@@ -10,7 +10,7 @@ namespace Cobble.PlayerControllers {
     [RequireComponent(typeof(CapsuleCollider))]
     public class FpsController : MonoBehaviour {
         [Header("Movement Settings")] [SerializeField] [Tooltip("The speed at which the player moves per second.")]
-        private float _movementSpeed = 8.0f;
+        private float _movementSpeed = 10.0f;
 
         [Tooltip("The speed at which the camera will rotate.")] [SerializeField]
         private float _rotationSpeed = 5.0f;
@@ -19,12 +19,12 @@ namespace Cobble.PlayerControllers {
         private float _runMultiplier = 2.0f;
 
         [Tooltip("The velocity that the player jumps with.")] [SerializeField]
-        private float _jumpForce = 3.0f;
+        private float _jumpForce = 50.0f;
 
         [SerializeField] private AnimationCurve _slopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f),
             new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
 
-        [HideInInspector] public float CurrentTargetSpeed = 8f;
+        [HideInInspector] public float CurrentTargetSpeed = 10.0f;
 
 
         [SerializeField]
@@ -36,7 +36,7 @@ namespace Cobble.PlayerControllers {
         private float _stickToGroundHelperDistance = 0.5f; // 
 
         [SerializeField] [Tooltip("Rate at which the controller comes to a stop when there is no input.")]
-        private float _slowDownRate = 20f;
+        private float _slowDownRate = 10.0f;
 
         [SerializeField] [Tooltip("Can the user control the direction that is being moved in the air.")]
         private bool _airControl;
@@ -134,7 +134,7 @@ namespace Cobble.PlayerControllers {
 
         private void RotateView() {
             //avoids the mouse looking if the game is effectively paused
-            if (Mathf.Abs(Time.timeScale) < float.Epsilon) return;
+            if (GameManager.IsPaused) return;
 
             // get the rotation before it's changed
             var oldYRotation = transform.eulerAngles.y;
@@ -201,7 +201,7 @@ namespace Cobble.PlayerControllers {
             RaycastHit hitInfo;
             if (Physics.SphereCast(transform.position, _capsuleCollider.radius * (1.0f - _shellOffset),
                 Vector3.down, out hitInfo,
-                _capsuleCollider.height / 2f + _groundCheckDistance, Physics.AllLayers,
+                (_capsuleCollider.height - _capsuleCollider.radius) / 2f + _groundCheckDistance, Physics.AllLayers,
                 QueryTriggerInteraction.Ignore)) {
                 _isGrounded = true;
                 _groundContactNormal = hitInfo.normal;
