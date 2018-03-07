@@ -8,17 +8,13 @@ namespace Cobble.Core {
 
 		public static bool IsPaused;
 
-		public bool IsPaused1;
-
 		private void Awake() {
 			GuiManager.TrapMouse();
 		}
 
 		private void Start() { }
 
-		private void Update() {
-			IsPaused1 = IsPaused;
-		}
+		private void Update() { }
 
 		public static void PauseGame() {
 			IsPaused = true;
