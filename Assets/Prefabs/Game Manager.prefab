@@ -63,7 +63,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b554b36f017ba654c956d5e0c9e021c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPaused: 0
-  _guiScreensList:
-  - {fileID: 114095781826663576, guid: 8b8ca4cb3201b234582dbcff2a01722e, type: 2}
-  - {fileID: 114304868925308776, guid: 65770c801a5f6d14c840254b09977bcd, type: 2}
+  _rootCanvasGameObject: {fileID: 0}

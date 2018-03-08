@@ -166,7 +166,6 @@ namespace Cobble.PlayerControllers {
                 x = Input.GetAxis("Horizontal"),
                 y = Input.GetAxis("Vertical")
             };
-            Debug.Log(input);
             UpdateDesiredTargetSpeed(input);
             return input;
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Cobble.Core {
 	[DisallowMultipleComponent]
@@ -10,9 +11,12 @@ namespace Cobble.Core {
 
 		private void Awake() {
 			GuiManager.TrapMouse();
+			ItemRegistry.RegisterItems();
 		}
 
-		private void Start() { }
+		private void Start() {
+
+		}
 
 		private void Update() { }
 
