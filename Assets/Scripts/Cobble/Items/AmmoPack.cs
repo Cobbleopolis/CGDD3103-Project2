@@ -15,7 +15,7 @@ namespace Cobble.Items {
         }
 
         public override void UseItem(GameObject usingGameObject) {
-            
+            Debug.Log("Using Ammo Pack"); //TODO actually make this do something
         }
     }
 }

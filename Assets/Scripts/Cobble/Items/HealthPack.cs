@@ -1,4 +1,5 @@
-﻿using Cobble.Lib;
+﻿using Cobble.Entity;
+using Cobble.Lib;
 using UnityEngine;
 
 namespace Cobble.Items {
@@ -15,7 +16,9 @@ namespace Cobble.Items {
         }
 
         public override void UseItem(GameObject usingGameObject) {
-            
+            var livingEntity = usingGameObject.GetComponent<LivingEntity>();
+            if (livingEntity)
+                livingEntity.Heal(20.0f);
         }
     }
 }

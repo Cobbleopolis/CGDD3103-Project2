@@ -17,5 +17,19 @@ namespace Cobble.Entity {
         public void AddItem(string itemId) {
             AddItem(ItemRegistry.GetItem(itemId));
         }
+
+        private void Update() {
+            if (Input.GetKeyDown(KeyCode.Alpha1)) //TODO use input manager
+                UseItem(0);
+            else if (Input.GetKeyDown(KeyCode.Alpha2)) //TODO use input manager
+                UseItem(1);
+        }
+
+        public void UseItem(int slotNum) {
+            if (slotNum < 0 || slotNum >= _inventory.Length) return;
+            var item = _inventory[slotNum];
+            if (item == null) return;
+            item.UseItem(gameObject);
+        }
     }
 }

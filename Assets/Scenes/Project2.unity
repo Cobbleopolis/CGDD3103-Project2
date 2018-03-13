@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  _currentHealth: 100
+  _currentHealth: 20
 --- !u!54 &1312091048
 Rigidbody:
   m_ObjectHideFlags: 0
