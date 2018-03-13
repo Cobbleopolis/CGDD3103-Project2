@@ -700,6 +700,12 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114107871775237290, guid: a7d1c6d594f023741900ab6b7f523ee6,
+        type: 2}
+      propertyPath: ItemPrefab
+      value: 
+      objectReference: {fileID: 1242588395413502, guid: 99310132c2f5e134fbd3e0c53b74e89f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d1c6d594f023741900ab6b7f523ee6, type: 2}
   m_IsPrefabParent: 0
@@ -818,6 +824,7 @@ GameObject:
   - component: {fileID: 1312091043}
   - component: {fileID: 1312091049}
   - component: {fileID: 1312091047}
+  - component: {fileID: 1312091050}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -967,6 +974,17 @@ MonoBehaviour:
   _airControl: 0
   _shellOffset: 0.1
   _playerCamera: {fileID: 0}
+--- !u!114 &1312091050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312091042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e97596522304f2faaa6d22cab03c203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1546871354
 Prefab:
   m_ObjectHideFlags: 0
@@ -1267,6 +1285,12 @@ Prefab:
       propertyPath: ItemId
       value: ammoPack
       objectReference: {fileID: 0}
+    - target: {fileID: 114107871775237290, guid: a7d1c6d594f023741900ab6b7f523ee6,
+        type: 2}
+      propertyPath: ItemPrefab
+      value: 
+      objectReference: {fileID: 1436544196650990, guid: 88295f80dd33ed746a6d9a1cd194e72f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d1c6d594f023741900ab6b7f523ee6, type: 2}
   m_IsPrefabParent: 0

@@ -1,10 +1,10 @@
 ﻿using Cobble.Lib;
+using UnityEngine;
 
 namespace Cobble.Items {
     public class AmmoPack : Item {
         private const string ItemIdValue = "ammoPack";
         private const string NameValue = "Ammo Pack";
-        private const string PrefabPathValue = "Prefabs/Items/Ammo Pack";
 
         public override string ItemId {
             get { return ItemIdValue; }
@@ -14,8 +14,8 @@ namespace Cobble.Items {
             get { return NameValue; }
         }
 
-        public override string PrefabPath {
-            get { return PrefabPathValue; }
+        public override void UseItem(GameObject usingGameObject) {
+            
         }
     }
 }

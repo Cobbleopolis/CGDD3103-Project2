@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Cobble.Items {
     public class ItemSpawner : MonoBehaviour {
-        public string ItemId;
+        public GameObject ItemPrefab;
 
         public float ItemRespawnTime = 5.0f;
 
@@ -17,7 +17,7 @@ namespace Cobble.Items {
         private GameObject _itemGameObject;
 
         private void Start() {
-            _itemGameObject = Instantiate(ItemRegistry.GetItem(ItemId).GetPrefabGameObject(), _itemContainer);
+            _itemGameObject = Instantiate(ItemPrefab, _itemContainer);
             _itemGameObject.SetActive(StartWithItem);
             if (!StartWithItem)
                 StartCoroutine(DelayItemSpawn(ItemRespawnTime));
@@ -33,9 +33,6 @@ namespace Cobble.Items {
             yield return new WaitForSeconds(delay);
             _emmitterRenderer.material.EnableKeyword("_EMISSION");
             _itemGameObject.SetActive(true);
-        }
-
-        private void Update() {
         }
     }
 }

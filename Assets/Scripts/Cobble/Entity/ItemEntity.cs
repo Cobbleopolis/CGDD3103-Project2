@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using Cobble.Items;
+using UnityEngine;
 
-namespace Cobble.Items {
-    public class ItemBehaviour : MonoBehaviour {
+namespace Cobble.Entity {
+    public class ItemEntity : MonoBehaviour {
+
+        public string ItemId;
+        
         private ItemSpawner _itemSpawner;
 
         private void Start() {
@@ -10,6 +14,11 @@ namespace Cobble.Items {
 
         private void OnCollisionEnter(Collision other) {
             if (!other.gameObject.CompareTag("Player")) return;
+            
+            var playerInventory = other.gameObject.GetComponent<PlayerInventory>();
+            if (playerInventory)
+                playerInventory.AddItem(ItemId);
+            
             if (_itemSpawner)
                 _itemSpawner.ItemTaken();
             else
