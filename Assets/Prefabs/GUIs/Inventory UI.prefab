@@ -264,6 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa42d701a1f7f7a4ea9604ca4df57786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerInventory: {fileID: 0}
+  _inventoryBody: {fileID: 1599125896135180}
+  _itemSlotPrefab: {fileID: 1040593534927412, guid: aa70acd649d011e418a5ebf2da02f00d,
+    type: 2}
 --- !u!114 &114623419446286098
 MonoBehaviour:
   m_ObjectHideFlags: 1
