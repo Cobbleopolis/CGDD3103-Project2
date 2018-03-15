@@ -29,6 +29,7 @@ namespace Cobble.UI {
             if (PlayerInventory.IsSlotEmpty(SlotNumber)) {
                 _itemText.text = "Item Name x 0";
                 _itemImage.sprite = null;
+                gameObject.SetActive(false);
                 return;
             }
             _itemText.text = _itemStack.Item.Name + " x " + _itemStack.Amount;

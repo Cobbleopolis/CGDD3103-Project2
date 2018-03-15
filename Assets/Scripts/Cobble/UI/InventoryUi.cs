@@ -13,33 +13,35 @@ namespace Cobble.UI {
 
         [SerializeField]
         private GameObject _itemSlotPrefab;
+
+        private ItemSlotUi[] _itemSlots;
         
         // Use this for initialization
         private void Start() {
             if (!PlayerInventory)
                 PlayerInventory = FindObjectOfType<PlayerInventory>();
+            
+            _itemSlots = new ItemSlotUi[PlayerInventory.Size];
+
+            for (var i = 0; i < _itemSlots.Length; i++) {
+                var itemSlotUi = Instantiate(_itemSlotPrefab, _inventoryBody.transform).GetComponent<ItemSlotUi>();
+                itemSlotUi.PlayerInventory = PlayerInventory;
+                itemSlotUi.SlotNumber = i;
+                itemSlotUi.gameObject.SetActive(!PlayerInventory.IsSlotEmpty(i));
+                itemSlotUi.gameObject.name = "Item Slot " + i;
+                itemSlotUi.UpdateInfo();
+                _itemSlots[i] = itemSlotUi;
+            }
         }
 
         // Update is called once per frame
         private void Update() { }
 
         public void UpdateItemSlots() {
-            var existingItemSlots = GetComponentsInChildren<ItemSlotUi>();
-            for (var i = 0; i < PlayerInventory.Size; i++) {
-                var itemStack = PlayerInventory.GetSlot(i);
-                if (itemStack == null || itemStack.IsEmpty) continue;
-                ItemSlotUi itemSlotUi;
-                if (i < existingItemSlots.Length) {
-                    itemSlotUi = existingItemSlots[i];
-                } else {
-                    itemSlotUi = Instantiate(_itemSlotPrefab, _inventoryBody.transform).GetComponent<ItemSlotUi>();
-                    itemSlotUi.SlotNumber = i;
-                }
-                
-                if (!itemSlotUi.PlayerInventory)
-                    itemSlotUi.PlayerInventory = PlayerInventory;
-                itemSlotUi.UpdateInfo();
-            }
+            if (_itemSlots == null) return;
+            foreach (var itemSlot in _itemSlots)
+                itemSlot.UpdateInfo();
+            
         }
     }
 }
