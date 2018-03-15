@@ -7,6 +7,8 @@ namespace Cobble.Lib {
         public abstract string ItemId { get; }
 
         public abstract string Name { get; }
+        
+        public abstract int MaxStack { get; }
 
         protected abstract string SpritePath { get; }
 

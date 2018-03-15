@@ -5,6 +5,7 @@ namespace Cobble.Items {
     public class AmmoPack : Item {
         private const string ItemIdValue = "ammoPack";
         private const string NameValue = "Ammo Pack";
+        private const int ItemMaxStack = 1;
         private const string ItemSpritePath = "Images/Items/Ammo Pack";
 
         public override string ItemId {
@@ -13,6 +14,10 @@ namespace Cobble.Items {
 
         public override string Name {
             get { return NameValue; }
+        }
+
+        public override int MaxStack {
+            get { return ItemMaxStack; }
         }
 
         protected override string SpritePath {

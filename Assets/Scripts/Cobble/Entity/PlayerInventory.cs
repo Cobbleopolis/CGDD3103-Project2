@@ -35,7 +35,7 @@ namespace Cobble.Entity {
                     _inventory[i] = new ItemStack(item, 1);
                     _isUiDirty = true;
                     break;
-                } else if (_inventory[i].Item == item) {
+                } else if (_inventory[i].Item == item && _inventory[i].Amount < item.MaxStack) {
                     _inventory[i].Amount++;
                     _isUiDirty = true;
                     break;

@@ -31,7 +31,9 @@ namespace Cobble.UI {
                 _itemImage.sprite = null;
                 return;
             }
-            _itemText.text = _itemStack.Item.Name + " x " + _itemStack.Amount;
+            _itemText.text = _itemStack.Item.Name;
+            if (_itemStack.Item.MaxStack > 1)
+                _itemText.text += " x " + _itemStack.Amount;
             _itemImage.sprite = _itemStack.Item.ItemSprite;
         }
 
