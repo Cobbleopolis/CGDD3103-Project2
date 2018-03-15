@@ -27,7 +27,7 @@ namespace Cobble.Core {
         }
 
         public static void RegisterItems() {
-            RegisterItem(new HealthPack());
+            RegisterItem(new SmallHealthPack());
             RegisterItem(new AmmoPack());
         }
     }

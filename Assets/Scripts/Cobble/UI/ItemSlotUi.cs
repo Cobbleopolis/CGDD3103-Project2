@@ -8,7 +8,7 @@ namespace Cobble.UI {
 
         public PlayerInventory PlayerInventory;
         
-        public int SlotNumber = 0;
+        public int SlotNumber;
 
         private ItemStack _itemStack;
 

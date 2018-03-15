@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuiScreen: 2
-  PausesGame: 0
+  PausesGame: 1
   FreeMouse: 1
 --- !u!114 &114338900513195028
 MonoBehaviour:
