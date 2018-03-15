@@ -12,7 +12,7 @@ namespace Cobble.Entity {
         [SerializeField]
         private InventoryUi _inventoryUi;
         
-        private ItemStack[] _inventory = new ItemStack[16];
+        private ItemStack[] _inventory = new ItemStack[12];
 
         private bool _isUiDirty;
 
@@ -64,7 +64,6 @@ namespace Cobble.Entity {
             _isUiDirty = true;
             itemStack.Item.UseItem(gameObject);
             itemStack.Amount--;
-            Debug.Log(_inventory[slotNum].Item.ItemId + " | " + _inventory[slotNum].Amount);
             if (!itemStack.IsEmpty) return;
             _inventory[slotNum] = null;
             _inventory = _inventory.OrderBy(slot => slot == null || slot.IsEmpty).ToArray();

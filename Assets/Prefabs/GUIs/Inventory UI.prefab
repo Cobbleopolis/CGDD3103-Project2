@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 222924192671401132}
   - component: {fileID: 114196173164671600}
   - component: {fileID: 114825226419384224}
+  - component: {fileID: 114133480259466764}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -61,6 +62,7 @@ GameObject:
   - component: {fileID: 224658229989425842}
   - component: {fileID: 222103001107431806}
   - component: {fileID: 114435096549139492}
+  - component: {fileID: 114766078553465816}
   m_Layer: 5
   m_Name: Inventory Text
   m_TagString: Untagged
@@ -116,6 +118,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 1
+--- !u!114 &114133480259466764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372556340673132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: 30
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &114155435031413930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,6 +341,25 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114766078553465816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409082761189752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: 30
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &114792594162536986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,7 +381,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
 --- !u!114 &114825226419384224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +422,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: GoBack
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

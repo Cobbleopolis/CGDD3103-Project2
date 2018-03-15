@@ -39,9 +39,11 @@ namespace Cobble.UI {
 
         public void UpdateItemSlots() {
             if (_itemSlots == null) return;
-            foreach (var itemSlot in _itemSlots)
+            foreach (var itemSlot in _itemSlots) {
+                itemSlot.gameObject.SetActive(!itemSlot.PlayerInventory.IsSlotEmpty(itemSlot.SlotNumber));
                 itemSlot.UpdateInfo();
-            
+            }
+
         }
     }
 }

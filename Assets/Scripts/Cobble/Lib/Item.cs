@@ -8,6 +8,18 @@ namespace Cobble.Lib {
 
         public abstract string Name { get; }
 
+        protected abstract string SpritePath { get; }
+
+        private Sprite _itemSprite;
+
+        public Sprite ItemSprite {
+            get {
+                if (!_itemSprite)
+                    _itemSprite = Resources.Load<Sprite>(SpritePath);
+                return _itemSprite;
+            }
+        }
+
         public abstract void UseItem(GameObject usingGameObject);
     }
 }
