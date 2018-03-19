@@ -912,12 +912,12 @@ Prefab:
     - target: {fileID: 224371589571778834, guid: 3dcca364ce0bb1044b56d042cf8e7378,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 224371589571778834, guid: 3dcca364ce0bb1044b56d042cf8e7378,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 224371589571778834, guid: 3dcca364ce0bb1044b56d042cf8e7378,
         type: 2}
@@ -1018,13 +1018,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1782817801827928, guid: a7d1c6d594f023741900ab6b7f523ee6, type: 2}
       propertyPath: m_Name
-      value: Item Spawner Ammo 2
+      value: Item Spawner Armor
       objectReference: {fileID: 0}
     - target: {fileID: 114107871775237290, guid: a7d1c6d594f023741900ab6b7f523ee6,
         type: 2}
       propertyPath: ItemPrefab
       value: 
-      objectReference: {fileID: 1128257980913842, guid: 8c4179c4c5a63884e9277abe1f84c5ed,
+      objectReference: {fileID: 1568120588044422, guid: e01bea0187e329e4281c5e91ce9259f3,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d1c6d594f023741900ab6b7f523ee6, type: 2}
