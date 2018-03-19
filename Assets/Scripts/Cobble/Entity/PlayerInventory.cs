@@ -11,6 +11,9 @@ namespace Cobble.Entity {
 
         [SerializeField]
         private InventoryUi _inventoryUi;
+
+        [SerializeField]
+        private QuickItemUi _quickItemUi;
         
         private ItemStack[] _inventory = new ItemStack[12];
 
@@ -72,6 +75,7 @@ namespace Cobble.Entity {
         private void UpdateDirtyUi() {
             if (!_isUiDirty) return;
             _inventoryUi.UpdateItemSlots();
+            _quickItemUi.UpdateItemSlots();
             _isUiDirty = false;
         }
     }
