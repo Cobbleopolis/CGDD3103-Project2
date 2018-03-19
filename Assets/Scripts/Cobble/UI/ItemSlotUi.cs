@@ -13,10 +13,11 @@ namespace Cobble.UI {
         private ItemStack _itemStack;
 
         [SerializeField]
-        private Image _itemImage;
+        private Text _itemText;
 
         [SerializeField]
-        private Text _itemText;
+        private Image _itemImage;
+
 
         private void Start() {
             
@@ -27,14 +28,14 @@ namespace Cobble.UI {
                 PlayerInventory = FindObjectOfType<PlayerInventory>();
             _itemStack = PlayerInventory.GetSlot(SlotNumber);
             if (PlayerInventory.IsSlotEmpty(SlotNumber)) {
-                _itemText.text = "Item Name x 0";
-                _itemImage.sprite = null;
-                return;
+                _itemImage.enabled = false;
+                _itemImage.overrideSprite = null;
+                _itemText.text = "";
+            } else {
+                _itemImage.enabled = true;
+                _itemImage.overrideSprite = _itemStack.Item.ItemSprite;
+                _itemText.text = _itemStack.Item.MaxStack > 1 ? _itemStack.Amount.ToString() : "";
             }
-            _itemText.text = _itemStack.Item.Name;
-            if (_itemStack.Item.MaxStack > 1)
-                _itemText.text += " x " + _itemStack.Amount;
-            _itemImage.sprite = _itemStack.Item.ItemSprite;
         }
 
         public void UseItem() {

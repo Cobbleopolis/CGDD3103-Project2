@@ -27,7 +27,6 @@ namespace Cobble.UI {
                 var itemSlotUi = Instantiate(_itemSlotPrefab, _inventoryBody.transform).GetComponent<ItemSlotUi>();
                 itemSlotUi.PlayerInventory = PlayerInventory;
                 itemSlotUi.SlotNumber = i;
-                itemSlotUi.gameObject.SetActive(!PlayerInventory.IsSlotEmpty(i));
                 itemSlotUi.gameObject.name = "Item Slot " + i;
                 itemSlotUi.UpdateInfo();
                 _itemSlots[i] = itemSlotUi;
@@ -35,15 +34,14 @@ namespace Cobble.UI {
         }
 
         // Update is called once per frame
-        private void Update() { }
+        private void Update() {
+
+        }
 
         public void UpdateItemSlots() {
             if (_itemSlots == null) return;
-            foreach (var itemSlot in _itemSlots) {
-                itemSlot.gameObject.SetActive(!itemSlot.PlayerInventory.IsSlotEmpty(itemSlot.SlotNumber));
+            foreach (var itemSlot in _itemSlots)
                 itemSlot.UpdateInfo();
-            }
-
         }
     }
 }
