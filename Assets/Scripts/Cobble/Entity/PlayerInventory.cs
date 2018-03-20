@@ -50,10 +50,7 @@ namespace Cobble.Entity {
         }
 
         private void Update() {
-            if (Input.GetKeyDown(KeyCode.Alpha1)) //TODO use input manager
-                UseItem(0);
-            else if (Input.GetKeyDown(KeyCode.Alpha2)) //TODO use input manager
-                UseItem(1);
+            
         }
 
         private void LateUpdate() {
