@@ -5,7 +5,7 @@ using Cobble.Lib;
 using Cobble.UI;
 using UnityEngine;
 
-namespace Cobble.Entity {
+namespace Cobble.Player {
     [DisallowMultipleComponent]
     public class PlayerInventory : MonoBehaviour {
 

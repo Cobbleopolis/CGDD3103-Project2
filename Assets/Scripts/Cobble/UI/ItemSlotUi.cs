@@ -1,27 +1,22 @@
-﻿using Cobble.Entity;
+﻿using Cobble.Player;
 using Cobble.Lib;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Cobble.UI {
     public class ItemSlotUi : MonoBehaviour {
-
         public PlayerInventory PlayerInventory;
-        
+
         public int SlotNumber;
 
         private ItemStack _itemStack;
 
-        [SerializeField]
-        private Text _itemText;
+        [SerializeField] private Text _itemText;
 
-        [SerializeField]
-        private Image _itemImage;
+        [SerializeField] private Image _itemImage;
 
 
-        private void Start() {
-            
-        }
+        private void Start() { }
 
         public void UpdateInfo() {
             if (!PlayerInventory)

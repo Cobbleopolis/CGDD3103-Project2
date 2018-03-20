@@ -1,26 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Cobble.Entity;
+using Cobble.Player;
 using UnityEngine;
 
 namespace Cobble.UI {
     public class InventoryUi : MonoBehaviour {
-
         public PlayerInventory PlayerInventory;
 
-        [SerializeField]
-        private GameObject _inventoryBody;
+        [SerializeField] private GameObject _inventoryBody;
 
-        [SerializeField]
-        private GameObject _itemSlotPrefab;
+        [SerializeField] private GameObject _itemSlotPrefab;
 
         private ItemSlotUi[] _itemSlots;
-        
+
         // Use this for initialization
         private void Start() {
             if (!PlayerInventory)
                 PlayerInventory = FindObjectOfType<PlayerInventory>();
-            
+
             _itemSlots = new ItemSlotUi[PlayerInventory.Size];
 
             for (var i = 0; i < _itemSlots.Length; i++) {
@@ -34,9 +31,7 @@ namespace Cobble.UI {
         }
 
         // Update is called once per frame
-        private void Update() {
-
-        }
+        private void Update() { }
 
         public void UpdateItemSlots() {
             if (_itemSlots == null) return;

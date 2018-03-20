@@ -1,4 +1,5 @@
 ﻿using Cobble.Lib;
+using Cobble.Player;
 using UnityEngine;
 
 namespace Cobble.Items {
@@ -25,7 +26,9 @@ namespace Cobble.Items {
         }
 
         public override void UseItem(GameObject usingGameObject) {
-            Debug.Log("Using Ammo Pack"); //TODO actually make this do something
+            var ammoInv = usingGameObject.GetComponent<PlayerAmmoInventory>();
+            if (ammoInv)
+                ammoInv.AddAmmo(10);
         }
     }
 }
