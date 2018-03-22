@@ -7,7 +7,7 @@ namespace Cobble.Items {
         private const string ItemIdValue = "largeAmmoPack";
         private const string NameValue = "<color=lime>Large Ammo Pack</color>";
         private const int ItemMaxStack = 1;
-        private const string ItemSpritePath = "Images/Items/Ammo Pack";
+        private const string ItemSpritePath = "Images/Items/Large Ammo Pack";
 
         public override string ItemId {
             get { return ItemIdValue; }
