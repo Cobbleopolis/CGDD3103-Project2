@@ -20,7 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4529014284730798}
   - component: {fileID: 33646147817039714}
+  - component: {fileID: 54197919149325966}
+  - component: {fileID: 136958810963453026}
   - component: {fileID: 23083134065458066}
+  - component: {fileID: 114648725016590542}
   m_Layer: 0
   m_Name: Large Ammo Pack
   m_TagString: Untagged
@@ -55,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f9144bdd9baa83747841773655da8370, type: 2}
+  - {fileID: 2100000, guid: 6d4f7ff2a5a6f8548a63871e3ce400c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,3 +85,43 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1960818141932750}
   m_Mesh: {fileID: 4300000, guid: 4d3539bd3ca7d3343bf61138acc8482c, type: 3}
+--- !u!54 &54197919149325966
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960818141932750}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114648725016590542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960818141932750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296050b352d640df8b51a60fd8d9b6e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemId: largeAmmoPack
+--- !u!136 &136958810963453026
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960818141932750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 0.25
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}

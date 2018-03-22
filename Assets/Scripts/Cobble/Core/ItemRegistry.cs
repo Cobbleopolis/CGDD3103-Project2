@@ -29,6 +29,7 @@ namespace Cobble.Core {
         public static void RegisterItems() {
             RegisterItem(new SmallHealthPack());
             RegisterItem(new AmmoPack());
+            RegisterItem(new LargeAmmoPack());
             RegisterItem(new ArmorItem());
         }
     }
