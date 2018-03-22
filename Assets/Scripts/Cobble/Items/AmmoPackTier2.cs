@@ -3,11 +3,11 @@ using Cobble.Player;
 using UnityEngine;
 
 namespace Cobble.Items {
-    public class LargeAmmoPack : Item {
-        private const string ItemIdValue = "largeAmmoPack";
-        private const string NameValue = "<color=lime>Large Ammo Pack</color>";
+    public class AmmoPackTier2 : Item {
+        private const string ItemIdValue = "ammoPackTier2";
+        private const string NameValue = "<color=lime>Tier 2 Ammo Pack</color>";
         private const int ItemMaxStack = 1;
-        private const string ItemSpritePath = "Images/Items/Large Ammo Pack";
+        private const string ItemSpritePath = "Images/Items/Ammo Pack Tier 2";
 
         public override string ItemId {
             get { return ItemIdValue; }
