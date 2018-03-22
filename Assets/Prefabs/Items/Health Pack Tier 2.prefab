@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 23138995332336638}
   - component: {fileID: 114052661939597880}
   m_Layer: 0
-  m_Name: Health Pack
+  m_Name: Health Pack Tier 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fe6b1210a6f23044fa0c3622f51cf8b1, type: 2}
+  - {fileID: 2100000, guid: 6d4f7ff2a5a6f8548a63871e3ce400c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296050b352d640df8b51a60fd8d9b6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: healthPack
+  ItemId: healthPackTier2
