@@ -1,4 +1,5 @@
-﻿using Cobble.Lib;
+﻿using Cobble.Entity;
+using Cobble.Lib;
 using UnityEngine;
 
 namespace Cobble.Items {
@@ -25,7 +26,9 @@ namespace Cobble.Items {
         }
 
         public override void UseItem(GameObject usingGameObject) {
-            Debug.Log("Using Armor"); //TODO actually make this do something
+            var armoredLivingEntity = usingGameObject.GetComponent<ArmoredLivingEntity>();
+            if (armoredLivingEntity)
+                armoredLivingEntity.SetArmor(armoredLivingEntity.MaxArmor);
         }
     }
 }
