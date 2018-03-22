@@ -3,11 +3,11 @@ using Cobble.Lib;
 using UnityEngine;
 
 namespace Cobble.Items {
-    public class SmallHealthPack : Item {
-        private const string ItemIdValue = "smallHealthPack";
-        private const string NameValue = "Small Health Pack";
+    public class HealthPack : Item {
+        private const string ItemIdValue = "healthPack";
+        private const string NameValue = "Health Pack";
         private const int ItemMaxStack = 3;
-        private const string ItemSpritePath = "Images/Items/Small Health";
+        private const string ItemSpritePath = "Images/Items/Health Pack";
 
         public override string ItemId {
             get { return ItemIdValue; }
