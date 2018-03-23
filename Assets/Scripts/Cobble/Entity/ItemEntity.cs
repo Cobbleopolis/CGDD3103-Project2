@@ -1,6 +1,4 @@
 ﻿using Cobble.Items;
-using Cobble.Player;
-using Cobble.UnityEditor;
 using UnityEngine;
 
 namespace Cobble.Entity {

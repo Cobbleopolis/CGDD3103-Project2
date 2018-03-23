@@ -36,6 +36,7 @@ ehthumbs.db
 *.booproj
 *.svd
 *.pdb
+*.[Dd]ot[Ss]ettings
 
 
 # Unity3D generated meta files
