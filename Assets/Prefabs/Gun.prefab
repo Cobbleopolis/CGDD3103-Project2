@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AmmoInventory: {fileID: 0}
-  ProjectileSpawnForce: {x: 0, y: 15, z: 0}
+  ProjectileSpawnForce: {x: 0, y: 0, z: 15}
   _projectilePrefab: {fileID: 1519859502871184, guid: e11ab5ea302a8004e8c7ae7796b8a9e5,
     type: 2}
