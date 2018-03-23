@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296050b352d640df8b51a60fd8d9b6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: armor
+  ItemId: armorPack

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Cobble.UI {
     public class ItemSlotUi : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
-        public PlayerInventory PlayerInventory;
+        public ItemInventory ItemInventory;
 
         public int SlotNumber;
 
@@ -25,10 +25,12 @@ namespace Cobble.UI {
         }
 
         public void UpdateInfo() {
-            if (!PlayerInventory)
-                PlayerInventory = FindObjectOfType<PlayerInventory>();
-            _itemStack = PlayerInventory.GetSlot(SlotNumber);
-            if (PlayerInventory.IsSlotEmpty(SlotNumber)) {
+            if (!ItemInventory) {
+                Debug.LogError("Slot Ui does not have a set ItemInventory field");
+                return;
+            }
+            _itemStack = ItemInventory.GetSlot(SlotNumber);
+            if (ItemInventory.IsSlotEmpty(SlotNumber)) {
                 _itemImage.enabled = false;
                 _itemImage.overrideSprite = null;
                 _itemText.text = "";
@@ -45,7 +47,7 @@ namespace Cobble.UI {
         }
 
         public void OnPointerEnter(PointerEventData eventData) {
-            if (_tooltip == null || PlayerInventory.IsSlotEmpty(SlotNumber)) return;
+            if (_tooltip == null || ItemInventory.IsSlotEmpty(SlotNumber)) return;
             _isTooltipShown = true;
             _tooltip.Show();
             SetTooltipText();
@@ -62,7 +64,7 @@ namespace Cobble.UI {
         }
 
         public void UseItem() {
-            PlayerInventory.UseItem(SlotNumber);
+            ItemInventory.UseItem(SlotNumber);
         }
     }
 }

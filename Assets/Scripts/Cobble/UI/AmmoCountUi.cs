@@ -6,7 +6,7 @@ namespace Cobble.UI {
     [RequireComponent(typeof(Text))]
     public class AmmoCountUi : MonoBehaviour {
 
-        public PlayerAmmoInventory PlayerAmmoInventory;
+        public AmmoInventory AmmoInventory;
 
         private Text _text;
 
@@ -15,7 +15,7 @@ namespace Cobble.UI {
         }
 
         private void Update() {
-            _text.text = PlayerAmmoInventory == null ? "N/A" : PlayerAmmoInventory.CurrentAmmoCount + "/" + PlayerAmmoInventory.MaxAmmoCount;
+            _text.text = AmmoInventory == null ? "N/A" : AmmoInventory.CurrentAmmoCount + "/" + AmmoInventory.MaxAmmoCount;
         }
     }
 }

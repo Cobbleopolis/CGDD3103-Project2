@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using Cobble.Core;
+using Cobble.Lib;
+using Cobble.Player;
 using UnityEngine;
 
 namespace Cobble.Items {
     public class ItemSpawner : MonoBehaviour {
-        public GameObject ItemPrefab;
+        public Item Item;
 
         public float ItemRespawnTime = 5.0f;
 
@@ -17,13 +19,16 @@ namespace Cobble.Items {
         private GameObject _itemGameObject;
 
         private void Start() {
-            _itemGameObject = Instantiate(ItemPrefab, _itemContainer);
+            _itemGameObject = Instantiate(Item.ItemPrefab, _itemContainer);
             _itemGameObject.SetActive(StartWithItem);
             if (!StartWithItem)
                 StartCoroutine(DelayItemSpawn(ItemRespawnTime));
         }
 
-        public void ItemTaken() {
+        public void ItemTaken(GameObject recivingGameObject) {
+            var recivingItemInventory = recivingGameObject.GetComponent<ItemInventory>();
+            if (recivingItemInventory)
+                recivingItemInventory.AddItem(Item);
             _itemGameObject.SetActive(false);
             _emmitterRenderer.material.DisableKeyword("_EMISSION");
             StartCoroutine(DelayItemSpawn(ItemRespawnTime));

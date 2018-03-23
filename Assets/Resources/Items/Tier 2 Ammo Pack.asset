@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b37a8ae77c471d89d72fe9a742889e, type: 3}
+  m_Name: Tier 2 Ammo Pack
+  m_EditorClassIdentifier: 
+  ItemId: ammoPackTier2
+  Name: <color=lime>Tier 2 Ammo Pack</color>
+  MaxStack: 1
+  ItemSprite: {fileID: 21300000, guid: f3834e15d494dd44aac91f8035df6230, type: 3}
+  ItemPrefab: {fileID: 1960818141932750, guid: 1bc4fd7f53eb9524e8135b155dad73a7, type: 2}
+  AmmoAmount: 20

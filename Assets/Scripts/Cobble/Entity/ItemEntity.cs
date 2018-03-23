@@ -1,11 +1,10 @@
 ﻿using Cobble.Items;
 using Cobble.Player;
+using Cobble.UnityEditor;
 using UnityEngine;
 
 namespace Cobble.Entity {
     public class ItemEntity : MonoBehaviour {
-
-        public string ItemId;
         
         private ItemSpawner _itemSpawner;
 
@@ -16,12 +15,8 @@ namespace Cobble.Entity {
         private void OnCollisionEnter(Collision other) {
             if (!other.gameObject.CompareTag("Player")) return;
             
-            var playerInventory = other.gameObject.GetComponent<PlayerInventory>();
-            if (playerInventory)
-                playerInventory.AddItem(ItemId);
-            
             if (_itemSpawner)
-                _itemSpawner.ItemTaken();
+                _itemSpawner.ItemTaken(other.gameObject);
             else
                 Destroy(gameObject);
         }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Cobble.Player {
-    public class PlayerAmmoInventory : MonoBehaviour {
+    public class AmmoInventory : MonoBehaviour {
 
         [SerializeField]
         private int _currentAmmoCount;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Cobble.UI {
     public class InventoryUi : MonoBehaviour {
-        public PlayerInventory PlayerInventory;
+        public ItemInventory ItemInventory;
 
         [SerializeField] private GameObject _inventoryBody;
 
@@ -15,14 +15,11 @@ namespace Cobble.UI {
 
         // Use this for initialization
         private void Start() {
-            if (!PlayerInventory)
-                PlayerInventory = FindObjectOfType<PlayerInventory>();
-
-            _itemSlots = new ItemSlotUi[PlayerInventory.Size];
+            _itemSlots = new ItemSlotUi[ItemInventory.Size];
 
             for (var i = 0; i < _itemSlots.Length; i++) {
                 var itemSlotUi = Instantiate(_itemSlotPrefab, _inventoryBody.transform).GetComponent<ItemSlotUi>();
-                itemSlotUi.PlayerInventory = PlayerInventory;
+                itemSlotUi.ItemInventory = ItemInventory;
                 itemSlotUi.SlotNumber = i;
                 itemSlotUi.gameObject.name = "Item Slot " + i;
                 itemSlotUi.UpdateInfo();

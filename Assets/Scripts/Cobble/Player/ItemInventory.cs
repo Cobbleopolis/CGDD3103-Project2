@@ -6,8 +6,7 @@ using Cobble.UI;
 using UnityEngine;
 
 namespace Cobble.Player {
-    [DisallowMultipleComponent]
-    public class PlayerInventory : MonoBehaviour {
+    public class ItemInventory : MonoBehaviour {
 
         [SerializeField]
         private InventoryUi _inventoryUi;

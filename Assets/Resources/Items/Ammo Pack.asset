@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b37a8ae77c471d89d72fe9a742889e, type: 3}
+  m_Name: Ammo Pack
+  m_EditorClassIdentifier: 
+  test: ammoPackTier2
+  ItemId: ammoPack
+  Name: Ammo Pack
+  MaxStack: 1
+  ItemSprite: {fileID: 21300000, guid: 112d0bc00748cb349a53c8bdd15aaf15, type: 3}
+  ItemPrefab: {fileID: 1128257980913842, guid: 8c4179c4c5a63884e9277abe1f84c5ed, type: 2}
+  AmmoAmount: 10
