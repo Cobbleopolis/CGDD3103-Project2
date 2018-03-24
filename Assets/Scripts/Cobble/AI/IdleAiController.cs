@@ -37,7 +37,7 @@ namespace Cobble.AI {
                     _pathToTarget);
                 if (!pathFound)
                     return _idleAi;
-                dist = NavUtils.GetPathLenght(_pathToTarget);
+                dist = NavUtils.GetPathLength(_pathToTarget);
             } else
                 dist = _navMeshAgent.remainingDistance;
             

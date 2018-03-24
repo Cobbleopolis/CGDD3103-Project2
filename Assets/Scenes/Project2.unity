@@ -228,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4880854034586320, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: TargetTransform
@@ -516,7 +516,7 @@ Transform:
   - {fileID: 391634225}
   - {fileID: 1666864832}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &505973775 stripped
 RectTransform:
@@ -832,7 +832,7 @@ Prefab:
     - target: {fileID: 224699040558998054, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -37.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224843708097530528, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
@@ -852,7 +852,7 @@ Prefab:
     - target: {fileID: 224843708097530528, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -37.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224476328780872566, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
@@ -872,7 +872,7 @@ Prefab:
     - target: {fileID: 224476328780872566, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -37.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224526534883742422, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
@@ -892,7 +892,7 @@ Prefab:
     - target: {fileID: 224526534883742422, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -37.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114670121424424842, guid: e4fcc2f979cdcf54c8511f29df0fb122,
         type: 2}
@@ -1084,7 +1084,7 @@ Prefab:
     - target: {fileID: 224932860620051852, guid: 4c28b2c2c1fd688488ed5a24dbbbfccd,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224932860620051852, guid: 4c28b2c2c1fd688488ed5a24dbbbfccd,
         type: 2}
@@ -1134,7 +1134,7 @@ Prefab:
     - target: {fileID: 224222876579870990, guid: 4c28b2c2c1fd688488ed5a24dbbbfccd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224222876579870990, guid: 4c28b2c2c1fd688488ed5a24dbbbfccd,
         type: 2}
@@ -1144,7 +1144,7 @@ Prefab:
     - target: {fileID: 224222876579870990, guid: 4c28b2c2c1fd688488ed5a24dbbbfccd,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c28b2c2c1fd688488ed5a24dbbbfccd, type: 2}
@@ -1553,7 +1553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4880854034586320, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1513097973189362, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
       propertyPath: m_Name
@@ -1619,6 +1619,11 @@ MonoBehaviour:
   MeleeDistance: 2
   MeleeDamage: 20
   AttackInterval: 1
+--- !u!4 &1191047396 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4880854034586320, guid: af7a5d050224ed443b9b1d6eb0859f9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1191047388}
 --- !u!1 &1312091042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,7 +2106,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1546871354
 Prefab:
@@ -2348,6 +2353,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114088777997553818, guid: f33e379ca521bd34f885b9edd042b948,
+        type: 2}
+      propertyPath: Enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4612219775163646, guid: f33e379ca521bd34f885b9edd042b948, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13
@@ -2385,6 +2395,26 @@ Prefab:
       propertyPath: FollowTarget
       value: 
       objectReference: {fileID: 1312091046}
+    - target: {fileID: 114088777997553818, guid: f33e379ca521bd34f885b9edd042b948,
+        type: 2}
+      propertyPath: PlayerTransform
+      value: 
+      objectReference: {fileID: 1312091046}
+    - target: {fileID: 114088777997553818, guid: f33e379ca521bd34f885b9edd042b948,
+        type: 2}
+      propertyPath: Enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1191047396}
+    - target: {fileID: 114088777997553818, guid: f33e379ca521bd34f885b9edd042b948,
+        type: 2}
+      propertyPath: Enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1898395354}
+    - target: {fileID: 114810904034683244, guid: f33e379ca521bd34f885b9edd042b948,
+        type: 2}
+      propertyPath: TargetTransform
+      value: 
+      objectReference: {fileID: 1191047396}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f33e379ca521bd34f885b9edd042b948, type: 2}
   m_IsPrefabParent: 0
@@ -2666,6 +2696,11 @@ MonoBehaviour:
   MeleeDistance: 2
   MeleeDamage: 20
   AttackInterval: 1
+--- !u!4 &1898395354 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4880854034586320, guid: af7a5d050224ed443b9b1d6eb0859f9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 380620903}
 --- !u!1001 &1917451387
 Prefab:
   m_ObjectHideFlags: 0

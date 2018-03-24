@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 195232340912692536}
   - component: {fileID: 114088777997553818}
   - component: {fileID: 114617271289967442}
+  - component: {fileID: 114810904034683244}
   m_Layer: 0
   m_Name: Friend
   m_TagString: Untagged
@@ -342,6 +343,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 0}
+  PlayerTransform: {fileID: 0}
+  Enemies: []
+  AttackDistance: 5
 --- !u!114 &114133843541963220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,6 +375,26 @@ MonoBehaviour:
   IsAiActive: 0
   FollowTarget: {fileID: 0}
   FollowDistance: 5
+--- !u!114 &114810904034683244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1636246825722094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65d141b4edc414cad5e88d5975950ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsAiActive: 0
+  TargetTransform: {fileID: 0}
+  _headTransform: {fileID: 4063184421273974}
+  MinTargetDist: 1.5
+  FoV: 60
+  AttackDistance: 5
+  MeleeDistance: 2
+  MeleeDamage: 20
+  AttackInterval: 1
 --- !u!195 &195232340912692536
 NavMeshAgent:
   m_ObjectHideFlags: 1
