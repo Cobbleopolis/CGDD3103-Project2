@@ -1,4 +1,5 @@
-﻿using Cobble.Player;
+﻿using Cobble.Core;
+using Cobble.Player;
 using Cobble.Lib;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,10 +19,29 @@ namespace Cobble.UI {
 
         private TooltipUi _tooltip;
 
-        private bool _isTooltipShown;
+        [SerializeField]
+        private bool _isHovered;
+        
+        [SerializeField]
+        private GuiManager _guiManager;
 
         private void Start() {
             _tooltip = FindObjectOfType<TooltipUi>();
+            
+            if (!_guiManager)
+                _guiManager = FindObjectOfType<GuiManager>();
+        }
+
+        private void Update() {
+            if (_guiManager.GetCurrentGuiScreen() != GuiScreen.Inventory || !_isHovered) return;
+            if (Input.GetButtonDown("Quick Item 1"))
+                ItemInventory.QuickItemUi.SetQuickSlotInventoryNumber(0, SlotNumber);
+            if (Input.GetButtonDown("Quick Item 2"))
+                ItemInventory.QuickItemUi.SetQuickSlotInventoryNumber(1, SlotNumber);
+            if (Input.GetButtonDown("Quick Item 3"))
+                ItemInventory.QuickItemUi.SetQuickSlotInventoryNumber(2, SlotNumber);
+            if (Input.GetButtonDown("Quick Item 4"))
+                ItemInventory.QuickItemUi.SetQuickSlotInventoryNumber(3, SlotNumber);
         }
 
         public void UpdateInfo() {
@@ -34,28 +54,28 @@ namespace Cobble.UI {
                 _itemImage.enabled = false;
                 _itemImage.overrideSprite = null;
                 _itemText.text = "";
-                if (!_isTooltipShown || !_tooltip) return;
-                _isTooltipShown = false;
+                if (!_isHovered || !_tooltip) return;
+                _isHovered = false;
                 _tooltip.Hide();
             } else {
                 _itemImage.enabled = true;
                 _itemImage.overrideSprite = _itemStack.Item.ItemSprite;
                 _itemText.text = _itemStack.Item.MaxStack > 1 ? _itemStack.Amount.ToString() : "";
-                if (_isTooltipShown)
+                if (_isHovered)
                     SetTooltipText();
             }
         }
 
         public void OnPointerEnter(PointerEventData eventData) {
             if (_tooltip == null || ItemInventory.IsSlotEmpty(SlotNumber)) return;
-            _isTooltipShown = true;
+            _isHovered = true;
             _tooltip.Show();
             SetTooltipText();
         }
 
         public void OnPointerExit(PointerEventData eventData) {
             _tooltip.Hide();
-            _isTooltipShown = false;
+            _isHovered = false;
         }
 
         private void SetTooltipText() {

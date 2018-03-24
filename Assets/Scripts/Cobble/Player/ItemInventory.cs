@@ -13,6 +13,10 @@ namespace Cobble.Player {
 
         [SerializeField]
         private QuickItemUi _quickItemUi;
+
+        public QuickItemUi QuickItemUi {
+            get { return _quickItemUi; }
+        }
         
         private ItemStack[] _inventory = new ItemStack[12];
 
@@ -48,9 +52,7 @@ namespace Cobble.Player {
             AddItem(ItemRegistry.GetItem(itemId));
         }
 
-        private void Update() {
-            
-        }
+        private void Update() { }
 
         private void LateUpdate() {
             UpdateDirtyUi();
