@@ -1616,7 +1616,9 @@ MonoBehaviour:
   MinTargetDist: 2.5
   FoV: 60
   AttackDistance: 5
-  ShootInterval: 1
+  MeleeDistance: 2
+  MeleeDamage: 20
+  AttackInterval: 1
 --- !u!1 &1312091042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,11 +2385,6 @@ Prefab:
       propertyPath: FollowTarget
       value: 
       objectReference: {fileID: 1312091046}
-    - target: {fileID: 195232340912692536, guid: f33e379ca521bd34f885b9edd042b948,
-        type: 2}
-      propertyPath: m_Speed
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f33e379ca521bd34f885b9edd042b948, type: 2}
   m_IsPrefabParent: 0
@@ -2666,7 +2663,9 @@ MonoBehaviour:
   MinTargetDist: 2.5
   FoV: 60
   AttackDistance: 5
-  ShootInterval: 1
+  MeleeDistance: 2
+  MeleeDamage: 20
+  AttackInterval: 1
 --- !u!1001 &1917451387
 Prefab:
   m_ObjectHideFlags: 0
