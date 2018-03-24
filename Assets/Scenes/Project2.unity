@@ -324,6 +324,14 @@ Prefab:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 0}
+      propertyPath: TargetTransform
+      value: 
+      objectReference: {fileID: 1312091046}
+    - target: {fileID: 0}
+      propertyPath: TargetTransform
+      value: 
+      objectReference: {fileID: 1312091046}
+    - target: {fileID: 0}
       propertyPath: Checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 873188104}
@@ -733,6 +741,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d1c6d594f023741900ab6b7f523ee6, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &521835235 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4170705011986198, guid: af7a5d050224ed443b9b1d6eb0859f9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 380620903}
 --- !u!1 &540036114
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,56 +1010,6 @@ Prefab:
       objectReference: {fileID: 1312091050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4fcc2f979cdcf54c8511f29df0fb122, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &848820853
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1898395354}
-    m_Modifications:
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129569738661008, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &856005802
 GameObject:
@@ -2625,7 +2588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 0}
   TargetTransform: {fileID: 1312091046}
-  FollowDistance: 10
+  AttackDistance: 10
 --- !u!114 &1898395352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2645,12 +2608,7 @@ MonoBehaviour:
   - {fileID: 391634225}
   - {fileID: 1666864832}
   _distanceThreshold: 0.1
---- !u!4 &1898395354 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4880854034586320, guid: af7a5d050224ed443b9b1d6eb0859f9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 380620903}
---- !u!114 &1898395356
+--- !u!114 &1898395353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2658,12 +2616,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1898395350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 550d894e106a404a9e2d2b547963ed90, type: 3}
+  m_Script: {fileID: 11500000, guid: f65d141b4edc414cad5e88d5975950ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsAiActive: 0
-  FollowTarget: {fileID: 1312091046}
-  FollowDistance: 5
+  TargetTransform: {fileID: 1312091046}
+  _headTransform: {fileID: 521835235}
+  MinTargetDist: 2.5
+  FoV: 60
+  AttackDistance: 5
+  ShootInterval: 1
 --- !u!1001 &1917451387
 Prefab:
   m_ObjectHideFlags: 0

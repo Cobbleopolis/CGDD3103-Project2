@@ -5,15 +5,15 @@ using UnityEngine.AI;
 namespace Cobble.AI {
     [RequireComponent(typeof(NavMeshAgent))]
     [RequireComponent(typeof(PatrolAi))]
-    [RequireComponent(typeof(FollowAi))]
+    [RequireComponent(typeof(AttackAi))]
     public class PatrolAiController : AiController {
         public Transform TargetTransform;
 
-        public float FollowDistance;
+        public float AttackDistance = 10f;
 
         private PatrolAi _patrolAi;
 
-        private FollowAi _followAi;
+        private AttackAi _attackAi;
 
         private NavMeshAgent _navMeshAgent;
 
@@ -23,7 +23,7 @@ namespace Cobble.AI {
 
         private void Start() {
             _patrolAi = GetComponent<PatrolAi>();
-            _followAi = GetComponent<FollowAi>();
+            _attackAi = GetComponent<AttackAi>();
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _pathToTarget = new NavMeshPath();
         }
@@ -40,8 +40,8 @@ namespace Cobble.AI {
             } else
                 dist = _navMeshAgent.remainingDistance;
             
-            if (dist <= FollowDistance)
-                return _followAi;
+            if (dist <= AttackDistance)
+                return _attackAi;
             return _patrolAi;
         }
 
