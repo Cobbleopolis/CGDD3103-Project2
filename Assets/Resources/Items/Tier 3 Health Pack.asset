@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemId: healthPackTier3
   Name: <color=magenta>Tier 3 Health Pack</color>
-  MaxStack: 2
+  MaxStack: 1
   ItemSprite: {fileID: 21300000, guid: 90721b6115fdac9499db7921ca789d29, type: 3}
   ItemPrefab: {fileID: 1242588395413502, guid: 19df752efd61e9243900951d1dfd50e9, type: 2}
   HealAmount: 60

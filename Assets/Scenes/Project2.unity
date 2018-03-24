@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  _currentHealth: 20
+  _currentHealth: 100
   MaxArmor: 40
   _currentArmor: 0
 --- !u!54 &1312091048
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c37ee2a3ec476b947953d65baefd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentAmmoCount: 30
+  _currentAmmoCount: 10
   MaxAmmoCount: 40
 --- !u!208 &1312091052
 NavMeshObstacle:
@@ -2386,7 +2386,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 10, y: 10}
-  m_SizeDelta: {x: 250, y: 15}
+  m_SizeDelta: {x: 250, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!225 &1553750880
 CanvasGroup:
