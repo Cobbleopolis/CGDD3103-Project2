@@ -9,6 +9,8 @@ namespace Cobble.Core {
 
 		public static bool IsPaused;
 
+		public static bool IsQuitting;
+
 		private void Awake() {
 			GuiManager.TrapMouse();
 			ItemRegistry.RegisterItems();
@@ -19,6 +21,10 @@ namespace Cobble.Core {
 		}
 
 		private void Update() { }
+
+		private void OnApplicationQuit() {
+			IsQuitting = true;
+		}
 
 		public static void PauseGame() {
 			IsPaused = true;

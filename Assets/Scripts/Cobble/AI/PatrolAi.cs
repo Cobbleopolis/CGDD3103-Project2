@@ -3,33 +3,39 @@ using UnityEngine.AI;
 
 namespace Cobble.AI {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class PatrolAi : MonoBehaviour {
+    public class PatrolAi : AiAction {
 
         public Transform[] Checkpoints;
 
-        private NavMeshAgent _navMeshAgent;
-
+        [SerializeField]
         private float _distanceThreshold = 0.1f;
         
         private int _currentCheckpoint;
 
-        private void Start() {
-            _navMeshAgent = GetComponent<NavMeshAgent>();
-            _currentCheckpoint = -1;
-            GoToNextCheckPoint();
+        protected override void OnActivate() {
+            if (!NavMeshAgent) return;
+            NavMeshAgent.stoppingDistance = 0f;
+            NavMeshAgent.SetDestination(Checkpoints[_currentCheckpoint].position);
+        }
+        
+        public override void Call() {
+            if (!NavMeshAgent.pathPending && NavMeshAgent.remainingDistance <= _distanceThreshold + NavMeshAgent.stoppingDistance)
+                GoToNextCheckPoint();
         }
 
-        private void Update() {
-            if (_navMeshAgent.remainingDistance <= _distanceThreshold)
-                GoToNextCheckPoint();
+        protected override void OnDeactivate() {
+            if (NavMeshAgent)
+                NavMeshAgent.ResetPath();
         }
 
         private void GoToNextCheckPoint() {
             _currentCheckpoint++;
             if (_currentCheckpoint >= Checkpoints.Length)
                 _currentCheckpoint = 0;
-            _navMeshAgent.SetDestination(Checkpoints[_currentCheckpoint].position);
+            NavMeshAgent.SetDestination(Checkpoints[_currentCheckpoint].position);
         }
-
+        
+        
+        
     }
 }
