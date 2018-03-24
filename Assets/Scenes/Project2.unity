@@ -114,6 +114,92 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 2077ac96344384a4eaaf36538e77b9a0, type: 2}
+--- !u!1 &25310254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 25310258}
+  - component: {fileID: 25310257}
+  - component: {fileID: 25310256}
+  - component: {fileID: 25310255}
+  m_Layer: 5
+  m_Name: Player Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25310255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25310254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc6c8b8155343c69670736f07a5f0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &25310256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25310254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 56
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 56
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &25310257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25310254}
+--- !u!224 &25310258
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25310254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 856005806}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 15, y: -15}
+  m_SizeDelta: {x: -30, y: 64}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1001 &25755137
 Prefab:
   m_ObjectHideFlags: 0
@@ -262,6 +348,15 @@ Prefab:
       propertyPath: m_Name
       value: Patrol Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1513097973189362, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114585889513930454, guid: af7a5d050224ed443b9b1d6eb0859f9e,
+        type: 2}
+      propertyPath: _playerScore
+      value: 
+      objectReference: {fileID: 25310255}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
   m_IsPrefabParent: 0
@@ -1010,6 +1105,7 @@ RectTransform:
   - {fileID: 1553750879}
   - {fileID: 505973775}
   - {fileID: 635785158}
+  - {fileID: 25310258}
   - {fileID: 1967165676}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1559,6 +1655,15 @@ Prefab:
       propertyPath: m_Name
       value: Idle Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1513097973189362, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114585889513930454, guid: af7a5d050224ed443b9b1d6eb0859f9e,
+        type: 2}
+      propertyPath: _playerScore
+      value: 
+      objectReference: {fileID: 25310255}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7a5d050224ed443b9b1d6eb0859f9e, type: 2}
   m_IsPrefabParent: 0
@@ -1642,6 +1747,7 @@ GameObject:
   - component: {fileID: 1312091051}
   - component: {fileID: 1312091047}
   - component: {fileID: 1312091053}
+  - component: {fileID: 1312091055}
   - component: {fileID: 1312091054}
   m_Layer: 0
   m_Name: Player
@@ -1860,6 +1966,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1312091055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312091042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b5755fe15c4919a072acc8c696e7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecrementAmount: 10
+  DecrementInterval: 1
+  _livingEntity: {fileID: 1312091047}
+  _playerScore: {fileID: 25310255}
 --- !u!1001 &1422541795
 Prefab:
   m_ObjectHideFlags: 0
@@ -2077,6 +2198,11 @@ Prefab:
       propertyPath: ProjectileSpawnForce.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114896697490544904, guid: 9a7e9d33acfcdc14ebc4286ad1df850f,
+        type: 2}
+      propertyPath: _playerScore
+      value: 
+      objectReference: {fileID: 25310255}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a7e9d33acfcdc14ebc4286ad1df850f, type: 2}
   m_IsPrefabParent: 0
@@ -2415,6 +2541,11 @@ Prefab:
       propertyPath: TargetTransform
       value: 
       objectReference: {fileID: 1191047396}
+    - target: {fileID: 114133843541963220, guid: f33e379ca521bd34f885b9edd042b948,
+        type: 2}
+      propertyPath: _playerScore
+      value: 
+      objectReference: {fileID: 25310255}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f33e379ca521bd34f885b9edd042b948, type: 2}
   m_IsPrefabParent: 0
@@ -2838,7 +2969,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 856005806}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

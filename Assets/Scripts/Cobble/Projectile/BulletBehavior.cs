@@ -1,4 +1,5 @@
 ﻿using Cobble.Entity;
+using Cobble.UI;
 using UnityEngine;
 
 namespace Cobble.Projectile {
@@ -8,6 +9,10 @@ namespace Cobble.Projectile {
 
         public float DamageAmount = 10f;
 
+        public int EnemyPointsWorth = 20;
+
+        public PlayerScore PlayerScore;
+
         private void Start() {
             Destroy(gameObject, MaxLifetime);
         }
@@ -16,6 +21,8 @@ namespace Cobble.Projectile {
             var livingEntity = other.gameObject.GetComponent<LivingEntity>();
             if (livingEntity)
                 livingEntity.Damage(DamageAmount);
+            if (PlayerScore && other.gameObject.CompareTag("Enemy"))
+                PlayerScore.AddScore(EnemyPointsWorth);
             Destroy(gameObject);
         }
     }
